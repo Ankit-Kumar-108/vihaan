@@ -42,12 +42,12 @@ export default function VihaanFestival() {
           </div>
         </header>
 
-        <main className="flex-grow relative">
+        <main className="grow relative">
           {/* Abstract Background Elements */}
           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-20"></div>
-            <div className="absolute top-20 right-[-10%] w-[500px] h-[500px] bg-secondary-accent/20 rounded-full blur-[100px] mix-blend-screen animate-pulse"></div>
-            <div className="absolute bottom-0 left-[-10%] w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] mix-blend-screen"></div>
+            <div className="absolute top-20 right-[-10%] w-125 h-125 bg-secondary-accent/20 rounded-full blur-[100px] mix-blend-screen animate-pulse"></div>
+            <div className="absolute bottom-0 left-[-10%] w-150 h-150 bg-primary/10 rounded-full blur-[120px] mix-blend-screen"></div>
           </div>
 
           {/* Hero Section */}
@@ -59,7 +59,7 @@ export default function VihaanFestival() {
                   <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
                   <span className="text-xs font-semibold text-slate-500 dark:text-slate-300 tracking-wide uppercase">Official Fest Landing</span>
                 </div>
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-700 to-slate-400 dark:from-white dark:via-slate-200 dark:to-slate-500 leading-[1.1] tracking-tight drop-shadow-lg">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-linear-to-r from-slate-900 via-slate-700 to-slate-400 dark:from-white dark:via-slate-200 dark:to-slate-500 leading-[1.1] tracking-tight drop-shadow-lg">
                   UNLEASH <br />
                   <span className="text-transparent bg-clip-text bg-linear-to-r from-secondary-accent to-primary">THE ENERGY</span>
                 </h1>
@@ -80,21 +80,21 @@ export default function VihaanFestival() {
                 {/* Countdown */}
                 <div className="flex gap-4 sm:gap-6 justify-center lg:justify-start pt-8">
                   <div className="flex flex-col items-center gap-2">
-                    <div className="w-16 h-20 sm:w-20 sm:h-24 bg-gradient-to-b from-slate-100 to-slate-200 dark:from-[#1a1c3a] dark:to-[#050714] border border-primary/20 rounded-xl flex items-center justify-center shadow-lg relative overflow-hidden group">
+                    <div className="w-16 h-20 sm:w-20 sm:h-24 bg-linear-to-b from-slate-100 to-slate-200 dark:from-[#1a1c3a] dark:to-[#050714] border border-primary/20 rounded-xl flex items-center justify-center shadow-lg relative overflow-hidden group">
                       <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
                       <span className="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white z-10">04</span>
                     </div>
                     <span className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Days</span>
                   </div>
                   <div className="flex flex-col items-center gap-2">
-                    <div className="w-16 h-20 sm:w-20 sm:h-24 bg-gradient-to-b from-slate-100 to-slate-200 dark:from-[#1a1c3a] dark:to-[#050714] border border-primary/20 rounded-xl flex items-center justify-center shadow-lg relative overflow-hidden group">
+                    <div className="w-16 h-20 sm:w-20 sm:h-24 bg-linear-to-b from-slate-100 to-slate-200 dark:from-[#1a1c3a] dark:to-[#050714] border border-primary/20 rounded-xl flex items-center justify-center shadow-lg relative overflow-hidden group">
                       <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
                       <span className="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white z-10">12</span>
                     </div>
                     <span className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Hours</span>
                   </div>
                   <div className="flex flex-col items-center gap-2">
-                    <div className="w-16 h-20 sm:w-20 sm:h-24 bg-gradient-to-b from-slate-100 to-slate-200 dark:from-[#1a1c3a] dark:to-[#050714] border border-primary/20 rounded-xl flex items-center justify-center shadow-lg relative overflow-hidden group">
+                    <div className="w-16 h-20 sm:w-20 sm:h-24 bg-linear-to-b from-slate-100 to-slate-200 dark:from-[#1a1c3a] dark:to-[#050714] border border-primary/20 rounded-xl flex items-center justify-center shadow-lg relative overflow-hidden group">
                       <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
                       <span className="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white z-10">30</span>
                     </div>
@@ -104,10 +104,10 @@ export default function VihaanFestival() {
               </div>
 
               {/* Hero Image */}
-              <div className="flex-1 w-full max-w-[600px] lg:max-w-none relative group perspective-1000">
-                <div className="absolute -inset-4 bg-gradient-to-r from-secondary-accent via-primary to-secondary-accent rounded-[2.5rem] opacity-50 blur-2xl group-hover:opacity-70 transition-opacity duration-500"></div>
+              <div className="flex-1 w-full max-w-150 lg:max-w-none relative group perspective-1000">
+                <div className="absolute -inset-4 bg-linear-to-r from-secondary-accent via-primary to-secondary-accent rounded-[2.5rem] opacity-50 blur-2xl group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div className="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl bg-[#1a0c13] aspect-4/3 rotate-y-6 hover:rotate-0 transition-all duration-500 ease-out">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent z-10"></div>
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-110"
                     data-alt="Excited crowd at a night concert with colorful stage lights and confetti"
@@ -133,7 +133,7 @@ export default function VihaanFestival() {
           <section className="relative z-10 py-12 px-4 md:px-8 max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="group relative overflow-hidden rounded-2xl h-40 bg-slate-100 dark:bg-[#1a1c3a] border border-primary/10 hover:border-primary/50 transition-all cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative h-full flex flex-col items-center justify-center gap-3 p-4">
                   <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
                     <span className="material-symbols-outlined text-2xl">music_note</span>
@@ -142,7 +142,7 @@ export default function VihaanFestival() {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-2xl h-40 bg-slate-100 dark:bg-[#1a1c3a] border border-primary/10 hover:border-primary/50 transition-all cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative h-full flex flex-col items-center justify-center gap-3 p-4">
                   <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
                     <span className="material-symbols-outlined text-2xl">theater_comedy</span>
@@ -151,7 +151,7 @@ export default function VihaanFestival() {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-2xl h-40 bg-slate-100 dark:bg-[#1a1c3a] border border-primary/10 hover:border-primary/50 transition-all cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative h-full flex flex-col items-center justify-center gap-3 p-4">
                   <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
                     <span className="material-symbols-outlined text-2xl">sports_basketball</span>
@@ -160,7 +160,7 @@ export default function VihaanFestival() {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-2xl h-40 bg-slate-100 dark:bg-[#1a1c3a] border border-primary/10 hover:border-primary/50 transition-all cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative h-full flex flex-col items-center justify-center gap-3 p-4">
                   <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
                     <span className="material-symbols-outlined text-2xl">campaign</span>
@@ -191,7 +191,7 @@ export default function VihaanFestival() {
                   data-alt="Close up of a guitarist performing on stage with red lighting"
                   style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7cqRk1F-_iXbiOJEV_r7O4p1pSxGkxvcSVOxcr_dpU8p1xeZzJ9lHNonrv_wE1mqyIYB0y2SphnpFelY1kLTUgkflxZV22vtEmfCLqY_gBXxxg45laoW0j4RLLGKvyJczvc1D1kXMk5mr4eHBr1KMhX1IT3l4ly9Bx_KADQ1aNs0tBNGwu0b32m74uHBIV_2vwKjVIC-Jl3aQOu38AmHJ4LKGQpIztF7Goa4gkbu9PxecPgySd9C9Kukv5zq1LGBNbbYaSrXKWTdU')" }}
                 ></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-80 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <span className="bg-violet-600 text-white text-xs font-bold px-2 py-1 rounded-md mb-2 inline-block">Pro Night</span>
                   <h3 className="text-white text-2xl font-bold">Battle of the Bands Finale</h3>
@@ -203,7 +203,7 @@ export default function VihaanFestival() {
                   data-alt="Silhouette of a hip hop dancer performing a jump in the air"
                   style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAv47UrY86X6pyuwIup-4ag0ufjfK37WOkPd_hN7MZ-44BlKawb77ffXAToIjNPQOio6vfQe1ZLFRSkjscsHEQT0EdLFn-0o8LbmVQjtlyfkyuwPPoREz_dlNkaAHFI4OCr-X3XHOzMy1dfPkld0h7LSwlthDxSxRt_vfmcchjlj4j6FRV9XH04mmxg1eOTbCYKrVDpwuJmFkhQE0sni7hsbMwzNka82WWgoKUmni0DuoKh8rC6ZXlHGjScZEYjtlVPQPvpBbqx0CZF')" }}
                 ></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-80 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <span className="bg-violet-600 text-white text-xs font-bold px-2 py-1 rounded-md mb-2 inline-block">Dance</span>
                   <h3 className="text-white text-xl font-bold">Street Dance Face-off</h3>
@@ -215,7 +215,7 @@ export default function VihaanFestival() {
                   data-alt="People sitting around tables with laptops at a hackathon event"
                   style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4VfSlGqwRvllj5W5Hv9UBxREJw20wRAU2BUO3vl-Z6sQiNk6Px7rt6n-_X-9ipVGM19ibwuvhwAX8Bp4KJWHMeVniJ5Cq2bLErY65gK7pCAYSWhjm1KqR41A8v3DrU6WQ71fiK87NAiSXAYBDPq3UGg3YQIh_aMdcxPmH95ntWtnt7VAgCvmZK7qPOsl2Jb2EkIDWOcxICC3OyNQ18SmcLa27j5IiHF42jso5xcEqhAitXsQuqF4_e7YIOOCnEtafbPatXUshYKvO')" }}
                 ></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-80 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <span className="bg-indigo-500 text-white text-xs font-bold px-2 py-1 rounded-md mb-2 inline-block">Tech</span>
                   <h3 className="text-white text-lg font-bold">24H Hackathon</h3>
@@ -227,7 +227,7 @@ export default function VihaanFestival() {
                   data-alt="Colorful abstract fashion show runway with models"
                   style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKGOQX2rCTpYJ4dYF099iN6YpR3SZIsdxPkqUtqW4Hr_wUCvM7qmk80cg2mz9aVkAIzoBEpoTI9X_SHyFAOITFAF9OEMDx7yqmVGkjv1r6q0PxosMxQJGfFSRotm7dkEF1qbCLfvY1FrRDBb8JMYuspaff_kWjx45oLmRyPmN2lpnOjVo5b_k6luqsDBZ1UErLBoza7h1wmDElEWujUbd9xTxEqhP1YyqEcLLzDS8G4cRjw5lVZXPuknCBHYBkSEXhfO0RYjoYyfB5')" }}
                 ></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-80 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <span className="bg-violet-600 text-white text-xs font-bold px-2 py-1 rounded-md mb-2 inline-block">Fashion</span>
                   <h3 className="text-white text-lg font-bold">Vogue Runway</h3>
