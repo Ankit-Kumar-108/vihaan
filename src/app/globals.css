@@ -5,11 +5,12 @@
 
 /* ===== Tailwind v4 Theme ===== */
 @theme {
-  --color-primary:#9D36F7;
+  --color-primary:#ee2b8c;
   --color-background-light: #f8f6f7;
-  --color-background-dark: #221019;
+  --color-background-dark: #0a050d;
   --color-secondary-accent: #FF0088;
-
+  --color-accent-blue:"#3b82f6";
+  --color-secondary:"#6366f1";
   --font-family-display: "Plus Jakarta Sans", sans-serif;
 
   --radius: 1rem;
