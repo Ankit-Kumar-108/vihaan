@@ -1,47 +1,13 @@
 'use client';
-
-import ThemeToggle from './components/ThemeToggle';
+import Nav from "./components/nav/nav";
+import Footer from "./components/footer/footer";
 
 export default function VihaanFestival() {
   return (
     <>
       <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col transition-colors duration-300">
         {/* Navigation */}
-        <header className="sticky top-0 z-40 w-full dark:bg-black/40 bg-primary/10 backdrop-blur-[5px] border-b-0 border-b-[#482336]/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-20">
-              <div className="flex items-center gap-3">
-                <div className="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
-                  <span className="material-symbols-outlined">bolt</span>
-                </div>
-                <div className="flex gap-1.5 ">
-                  <h2 className="text-slate-900 dark:text-white sm:text-2xl text-lg font-extrabold tracking-tight">Vihaan 26</h2>
-                  <span  className='lg:hidden'>
-                   <h2 className="text-[10px] -mt-1.5 text-transparent bg-clip-text font-bold bg-linear-to-r from-primary to-secondary-accent">Organised By RGI</h2> 
-                  </span>
-                  <span className='hidden lg:flex'>
-                  <h2 className="text-[15px] -mt-2 text-transparent bg-clip-text font-bold bg-linear-to-r from-primary to-secondary-accent">Organised By Radharaman Group of Institutes</h2>
-                  </span>
-                </div>
-              </div>
-              <nav className="hidden md:flex gap-8 items-center">
-                <a className="text-slate-800 dark:text-slate-200 hover:text-primary transition-colors text-sm font-bold" href="#">Home</a>
-                <a className="text-slate-800 dark:text-slate-200 hover:text-primary transition-colors text-sm font-bold" href="#">Events</a>
-                <a className="text-slate-800 dark:text-slate-200 hover:text-primary transition-colors text-sm font-bold" href="#">Gallery</a>
-                </nav>
-              <div className="flex items-center gap-4">
-                <ThemeToggle />
-                <button className="hidden sm:flex items-center justify-center rounded-full h-10 px-6 bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-all shadow-[0_0_15px_rgba(238,43,140,0.4)] hover:shadow-[0_0_25px_rgba(238,43,140,0.6)]">
-                  Register Now
-                </button>
-                <button className="md:hidden text-slate-800 dark:text-white p-2">
-                  <span className="material-symbols-outlined">menu</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </header>
-
+        <Nav />
         <main className="grow relative">
           {/* Abstract Background Elements */}
           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -246,55 +212,7 @@ export default function VihaanFestival() {
         </main>
 
         {/* Footer */}
-        <footer className="border-t border-primary/10 bg-slate-50 dark:bg-[#02030a] pt-12 pb-8 px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-              <div className="md:col-span-2">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="size-6 bg-primary rounded flex items-center justify-center text-white">
-                    <span className="material-symbols-outlined text-sm">bolt</span>
-                  </div>
-                  <h3 className="text-slate-900 dark:text-white text-xl font-bold">Vihaan 2k26</h3>
-                </div>
-                <p className="text-slate-500 max-w-sm mb-6">
-                  The annual cultural and technical festival that brings together the brightest minds and the wildest spirits.
-                </p>
-                <div className="flex gap-4">
-                  <a className="h-10 w-10 rounded-full bg-slate-200 dark:bg-[#1a1c3a] flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-white hover:bg-primary transition-colors" href="#">
-                    <span className="material-symbols-outlined">public</span>
-                  </a>
-                  <a className="h-10 w-10 rounded-full bg-slate-200 dark:bg-[#1a1c3a] flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-white hover:bg-primary transition-colors" href="#">
-                    <span className="material-symbols-outlined">photo_camera</span>
-                  </a>
-                  <a className="h-10 w-10 rounded-full bg-slate-200 dark:bg-[#1a1c3a] flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-white hover:bg-primary transition-colors" href="#">
-                    <span className="material-symbols-outlined">mail</span>
-                  </a>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-slate-900 dark:text-white font-bold mb-4">Explore</h4>
-                <ul className="space-y-2 text-slate-500">
-                  <li><a className="hover:text-primary transition-colors" href="#">Events Schedule</a></li>
-                  <li><a className="hover:text-primary transition-colors" href="#">Sponsors</a></li>
-                  <li><a className="hover:text-primary transition-colors" href="#">Campus Ambassadors</a></li>
-                  <li><a className="hover:text-primary transition-colors" href="#">Contact Us</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-slate-900 dark:text-white font-bold mb-4">Legal</h4>
-                <ul className="space-y-2 text-slate-500">
-                  <li><a className="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-                  <li><a className="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
-                  <li><a className="hover:text-primary transition-colors" href="#">Code of Conduct</a></li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-[#2d1b24] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-600">
-              <p>© 2026 Vihaan Festival. All rights reserved.</p>
-              <p className="flex items-center gap-1">Designed with <span className="material-symbols-outlined text-xs text-primary">favorite</span> by Tech Team</p>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );

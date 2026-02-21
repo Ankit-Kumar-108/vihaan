@@ -5,7 +5,7 @@
 
 /* ===== Tailwind v4 Theme ===== */
 @theme {
-  --color-primary:#9D36F7;
+  --color-primary: #9D36F7;
   --color-background-light: #f8f6f7;
   --color-background-dark: #221019;
   --color-secondary-accent: #FF0088;
@@ -55,15 +55,46 @@ body {
   background-size: 40px 40px;
 }
 
-/* ===== Glass Panel (regular class so it doesn't interfere with sticky) ===== */
-/* .glass-panel {
-  background: rgba(238, 43, 140, 0.5);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(22px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-} */
+/* ===== Glass Panel & Card (in @layer components so Tailwind utilities can override) ===== */
+@layer components {
+  .glass-panel {
+    background: rgba(238, 43, 140, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(22px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
-.light .glass-panel {
-  background: rgba(238, 43, 140, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  .light .glass-panel {
+    background: rgba(238, 43, 140, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .light .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
 }
+
+/* ===== Register Page Background ===== */
+.register-page {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(157, 54, 247, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(255, 0, 136, 0.15) 0px, transparent 50%);
+}
+
+/* ===== Event Card Hover Gradient ===== */
+/* .event-card {
+  transition: all 0.2s ease;
+}
+
+.event-card:hover {
+  background: linear-gradient(to right, var(--color-primary)/10, var(--color-secondary-accent)/10) !important;
+  border-color: var(--color-primary) !important;
+} */
