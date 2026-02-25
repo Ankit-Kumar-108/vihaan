@@ -19,7 +19,7 @@ export default function RegisterPage() {
                         </p>
                     </div>
                     {/* Form Container */}
-                    <div className="glass-card rounded-lg p-8 md:p-12 shadow-2xl border-white/5">
+                    <div className="glass-card rounded-lg p-8 md:p-12 shadow-2xl border-white/5 bg-white/5">
                         <form className="space-y-10">
                             {/* Step 1: Personal Details Section */}
                             <div className="space-y-8">
@@ -102,13 +102,13 @@ export default function RegisterPage() {
                             </div>
 
                             {/* Step 2: Event Selection */}
-                            <div className="space-y-8">
+                            <div className="space-y-8 ">
                                 <div className="flex items-center gap-3 border-l-4 border-secondary-accent pl-4">
                                     <h3 className="text-2xl font-bold">Select Your Event</h3>
                                 </div>
 
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                    <div className="p-4 rounded-2xl border border-slate-300 dark:border-white/15 cursor-pointer group active:scale-95 hover:bg-linear-to-br from-primary/30 via-primary/20 to-secondary-accent/20 duration-400 transition-all">
+                                    <div className="bg-background-light dark:bg-background-dark p-4 rounded-2xl border border-slate-300 dark:border-white/15 cursor-pointer group active:scale-95 hover:bg-linear-to-br from-primary/30 via-primary/20 to-secondary-accent/20 duration-400 transition-all">
                                         <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mb-3 group-hover:bg-primary transition-colors duration-400">
                                             <span className="material-symbols-outlined text-primary group-hover:text-white">music_note</span>
                                         </div>
@@ -116,7 +116,7 @@ export default function RegisterPage() {
                                         <p className="text-[10px] text-slate-400">Solo/Band</p>
                                     </div>
 
-                                    <div className="p-4 rounded-2xl border border-slate-300 dark:border-white/15 cursor-pointer group active:scale-95 hover:bg-linear-to-br from-primary/30 via-primary/20 to-secondary-accent/20 duration-400 transition-all">
+                                    <div className="bg-background-light dark:bg-background-dark p-4 rounded-2xl border border-slate-300 dark:border-white/15 cursor-pointer group active:scale-95 hover:bg-linear-to-br from-primary/30 via-primary/20 to-secondary-accent/20 duration-400 transition-all">
                                         <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mb-3 group-hover:bg-blue-500 transition-colors duration-400">
                                             <span className="material-symbols-outlined text-blue-500 group-hover:text-white">settings_accessibility</span>
                                         </div>
@@ -124,7 +124,7 @@ export default function RegisterPage() {
                                         <p className="text-[10px] text-slate-400">Classical/Pop</p>
                                     </div>
 
-                                    <div className="p-4 rounded-2xl border border-slate-300 dark:border-white/15 cursor-pointer group active:scale-95 hover:bg-linear-to-br from-primary/30 via-primary/20 to-secondary-accent/20 duration-400 transition-all">
+                                    <div className="bg-background-light dark:bg-background-dark p-4 rounded-2xl border border-slate-300 dark:border-white/15 cursor-pointer group active:scale-95 hover:bg-linear-to-br from-primary/30 via-primary/20 to-secondary-accent/20 duration-400 transition-all">
                                         <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center mb-3 group-hover:bg-purple-500 transition-colors duration-400">
                                             <span className="material-symbols-outlined text-purple-500 group-hover:text-white">sports_basketball</span>
                                         </div>
@@ -132,7 +132,7 @@ export default function RegisterPage() {
                                         <p className="text-[10px] text-slate-400">Indoor/Outdoor</p>
                                     </div>
 
-                                    <div className="p-4 rounded-2xl border border-slate-300 dark:border-white/15 cursor-pointer group active:scale-95 hover:bg-linear-to-br from-primary/30 via-primary/20 to-secondary-accent/20 duration-400 transition-all">
+                                    <div className="bg-background-light dark:bg-background-dark p-4 rounded-2xl border border-slate-300 dark:border-white/15 cursor-pointer group active:scale-95 hover:bg-linear-to-br from-primary/30 via-primary/20 to-secondary-accent/20 duration-400 transition-all">
                                         <div className="w-10 h-10 rounded-lg bg-yellow-500/20 flex items-center justify-center mb-3 group-hover:bg-yellow-500 transition-colors duration-400">
                                             <span className="material-symbols-outlined text-yellow-500 group-hover:text-white">record_voice_over</span>
                                         </div>
@@ -155,24 +155,22 @@ export default function RegisterPage() {
 
                                 <div className="space-y-4">
                                     {/* Team Member Row */}
-                                    <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/5">
+                                    <div className="flex items-center gap-4 p-4 rounded-2xl bg-background-light dark:bg-background-dark border border-slate-300 dark:border-white/15">
                                         <div className="flex-1 grid md:grid-cols-2 gap-4">
                                             <input
-                                                className="bg-transparent border-b border-slate-300 dark:border-white/20 py-2 focus:border-primary focus:ring-0 outline-none text-sm transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                                                className="bg-transparent border-b border-slate-200 dark:border-white/20 py-2 focus:border-primary focus:ring-0 outline-none text-md transition-all placeholder:text-slate-400 dark:placeholder:text-slate-400"
                                                 placeholder="Member Name"
                                                 type="text"
                                             />
                                             <input
-                                                className="bg-transparent border-b border-slate-300 dark:border-white/20 py-2 focus:border-primary focus:ring-0 outline-none text-sm transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                                                className="bg-transparent border-b border-slate-200 dark:border-white/20 py-2 focus:border-primary focus:ring-0 outline-none text-md transition-all placeholder:text-slate-400 dark:placeholder:text-slate-400"
                                                 placeholder="Member Enrollment Number"
                                                 type="text"
                                             />
                                         </div>
-                                        <form action="submit">
                                         <button className="p-2 hover:bg-red-500/10 rounded-lg text-slate-400 dark:text-slate-500 hover:text-red-500 transition-colors" type="button">
                                             <span className="material-symbols-outlined text-red-500/50">delete</span>
                                         </button>
-                                        </form>
                                     </div>
                                 </div>
                             </div>
