@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Nav from '../components/nav/nav'
 import Footer from '../components/footer/footer'
@@ -11,7 +12,7 @@ export default function Gallery() {
       <Nav />
       <main className="grow flex justify-center items-center">
         <h1 className="text-4xl font-bold">Gallery</h1>
-        
+
       </main>
       <Footer />
     </div>
