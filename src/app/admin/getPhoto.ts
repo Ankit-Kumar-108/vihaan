@@ -28,6 +28,7 @@ export default async function GetPhoto() {
           id: doc.id,
           ...docData,
           dataUrl: `https://drive.google.com/thumbnail?id=${driveId}&sz=w500`,
+          fullResImg: `https://drive.google.com/uc?export=view&id=${driveId}`,
           timestamp: docData.createdAt,
         }
       })
