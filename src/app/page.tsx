@@ -2,6 +2,10 @@
 import Nav from "./components/nav/nav";
 import Footer from "./components/footer/footer";
 import Link from "next/link";
+import About from "./components/About";
+import EventsShowcase from "./components/EventsShowcase";
+import Timeline from "./components/Timeline";
+import QRUploadSection from "./components/QRUploadSection";
 
 export default function VihaanFestival() {
   return (
@@ -60,54 +64,56 @@ export default function VihaanFestival() {
               </div>
             </div>
           </section>
-
+          {/* Registration CTA */}
+          <section className="relative z-10 py-12 px-4 md:px-8 max-w-7xl mx-auto">
+            <div className="glass-card rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-2">
+                  Ready to compete?
+                </h2>
+                <p className="text-slate-500 dark:text-slate-400 max-w-lg">
+                  Register now to secure your spot in 50+ events. Solo or team — everyone&apos;s welcome!
+                </p>
+              </div>
+              <Link
+                href="/register"
+                className="shrink-0 px-10 py-4 rounded-full bg-linear-to-r from-primary to-secondary-accent text-white font-bold text-lg shadow-[0_0_30px_rgba(157,54,247,0.4)] hover:shadow-[0_0_40px_rgba(238,43,140,0.5)] transition-all hover:-translate-y-0.5"
+              >
+                Register Now →
+              </Link>
+            </div>
+          </section>
           {/* Category Section */}
           <section className="relative z-10 py-12 px-4 md:px-8 max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <Link href="events/Music">
-                <div className="group relative overflow-hidden rounded-2xl h-40 bg-slate-100 dark:bg-[#1a1c3a] border border-primary/10 hover:border-primary/50 transition-all cursor-pointer">
-                  <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div className="relative h-full flex flex-col items-center justify-center gap-3 p-4">
-                    <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
-                      <span className="material-symbols-outlined text-2xl">music_note</span>
+              {[
+                { href: 'events/Music', icon: 'music_note', name: 'Music', count: '8 Events', gradient: 'from-pink-600 via-rose-500 to-orange-400' },
+                { href: 'events/Dance', icon: 'settings_accessibility', name: 'Dance', count: '6 Events', gradient: 'from-blue-600 via-indigo-500 to-violet-400' },
+                { href: 'events/Sports', icon: 'sports_basketball', name: 'Sports', count: '12 Events', gradient: 'from-emerald-600 via-green-500 to-teal-400' },
+                { href: 'events/Debate', icon: 'campaign', name: 'Debate', count: '4 Events', gradient: 'from-amber-600 via-yellow-500 to-orange-400' },
+              ].map((cat) => (
+                <Link key={cat.name} href={cat.href}>
+                  <div className={`group relative overflow-hidden rounded-2xl h-44 bg-linear-to-br ${cat.gradient} cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)]`}>
+                    {/* Decorative circles */}
+                    <div className="absolute -top-8 -right-8 w-28 h-28 rounded-full bg-white/10 group-hover:scale-125 transition-transform duration-500" />
+                    <div className="absolute -bottom-6 -left-6 w-20 h-20 rounded-full bg-white/10 group-hover:scale-150 transition-transform duration-700" />
+                    <div className="absolute top-1/2 left-1/2 w-40 h-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 group-hover:bg-white/10 transition-colors duration-500" />
+
+                    <div className="relative h-full flex flex-col justify-between p-5">
+                      <div className="flex items-start justify-between">
+                        <div className="h-12 w-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                          <span className="material-symbols-outlined text-white text-2xl">{cat.icon}</span>
+                        </div>
+                        <span className="material-symbols-outlined text-white/40 text-xl group-hover:text-white/80 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">arrow_outward</span>
+                      </div>
+                      <div>
+                        <h3 className="text-white font-black text-xl mb-0.5">{cat.name}</h3>
+                        <p className="text-white/60 text-xs font-semibold">{cat.count}</p>
+                      </div>
                     </div>
-                    <h3 className="text-slate-900 dark:text-white font-bold text-lg">Music</h3>
                   </div>
-                </div>
-              </Link>
-              <Link href="events/Dance">
-                <div className="group relative overflow-hidden rounded-2xl h-40 bg-slate-100 dark:bg-[#1a1c3a] border border-primary/10 hover:border-primary/50 transition-all cursor-pointer">
-                  <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div className="relative h-full flex flex-col items-center justify-center gap-3 p-4">
-                    <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
-                      <span className="material-symbols-outlined text-2xl">theater_comedy</span>
-                    </div>
-                    <h3 className="text-slate-900 dark:text-white font-bold text-lg">Dance</h3>
-                  </div>
-                </div>
-              </Link>
-              <Link href="events/Sports">
-                <div className="group relative overflow-hidden rounded-2xl h-40 bg-slate-100 dark:bg-[#1a1c3a] border border-primary/10 hover:border-primary/50 transition-all cursor-pointer">
-                  <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div className="relative h-full flex flex-col items-center justify-center gap-3 p-4">
-                    <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
-                      <span className="material-symbols-outlined text-2xl">sports_basketball</span>
-                    </div>
-                    <h3 className="text-slate-900 dark:text-white font-bold text-lg">Sports</h3>
-                  </div>
-                </div>
-              </Link>
-              <Link href="events/Debate">
-                <div className="group relative overflow-hidden rounded-2xl h-40 bg-slate-100 dark:bg-[#1a1c3a] border border-primary/10 hover:border-primary/50 transition-all cursor-pointer">
-                  <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div className="relative h-full flex flex-col items-center justify-center gap-3 p-4">
-                    <div className="h-12 w-12 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
-                      <span className="material-symbols-outlined text-2xl">campaign</span>
-                    </div>
-                    <h3 className="text-slate-900 dark:text-white font-bold text-lg">Debate</h3>
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              ))}
             </div>
           </section>
 
@@ -195,10 +201,17 @@ export default function VihaanFestival() {
               View Full Gallery
             </button>
           </section>
-          {/* for photo sumission */}
-          <div>
+          {/* About Section */}
+          <About />
 
-          </div>
+          {/* All Events Showcase */}
+          <EventsShowcase />
+
+          {/* Event Schedule / Timeline */}
+          <Timeline />
+
+          {/* QR Photo Upload */}
+          <QRUploadSection />
 
         </main>
 

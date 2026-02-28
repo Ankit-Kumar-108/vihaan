@@ -56,7 +56,7 @@ body {
 }
 
 /* ===== Glass Panel & Card (in @layer components so Tailwind utilities can override) ===== */
- @layer components {
+@layer components {
   .glass-panel {
     background: rgba(238, 43, 140, 0.05);
     backdrop-filter: blur(12px);
@@ -80,7 +80,24 @@ body {
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(0, 0, 0, 0.08);
   }
-} 
+}
+
+/* ===== Fade-in Animation ===== */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-fade-in {
+  animation: fade-in 0.4s ease-out;
+}
 
 /* ===== Register Page Background ===== */
 .register-page {
