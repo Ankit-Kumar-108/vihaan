@@ -22,6 +22,7 @@ interface PendingPhoto {
     category: string;
     uploaderName: string;
     dataUrl: string;
+    fullResImg: string
     status: 'pending' | 'published';
 }
 

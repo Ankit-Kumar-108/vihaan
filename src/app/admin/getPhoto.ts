@@ -1,38 +1,26 @@
 "use server"
 
-import { db, drive } from "@/lib/server-configs"
+import { db } from "@/lib/server-configs"
 
 export default async function GetPhoto() {
   try {
+    // 1. Fetch only from Firestore (Super fast)
     const data = await db.collection('submissions').orderBy('createdAt', 'desc').get()
 
-    const photos = await Promise.all(
-      data.docs.map(async (doc) => {
-        const docData = doc.data()
-        const driveId = docData.driveId
+    // 2. Map the data locally without any async Drive API calls
+    const photos = data.docs.map((doc) => {
+      const docData = doc.data()
+      const driveId = docData.driveId
 
-        // Make the file publicly viewable so the image loads in the browser
-        try {
-          await drive.permissions.create({
-            fileId: driveId,
-            requestBody: {
-              role: "reader",
-              type: "anyone",
-            },
-          })
-        } catch {
-          // Permission may already exist — ignore
-        }
-
-        return {
-          id: doc.id,
-          ...docData,
-          dataUrl: `https://drive.google.com/thumbnail?id=${driveId}&sz=w500`,
-          fullResImg: `https://drive.google.com/uc?export=view&id=${driveId}`,
-          timestamp: docData.createdAt,
-        }
-      })
-    )
+      return {
+        id: doc.id,
+        ...docData,
+        // Use the smart URL patterns we discussed
+        dataUrl: `https://drive.google.com/thumbnail?id=${driveId}&sz=w500`,
+        fullResImg: `https://drive.google.com/uc?export=view&id=${driveId}`,
+        timestamp: docData.createdAt,
+      }
+    })
 
     return photos
   } catch (error) {
@@ -40,4 +28,3 @@ export default async function GetPhoto() {
     return []
   }
 }
-
