@@ -9,7 +9,7 @@ export async function ApprovePhoto(id: string, driveId: string,) {
         await drive.permissions.create({
             fileId: driveId,
             requestBody: {
-                role: "viewer",
+                role: "reader",
                 type: "anyone",
             },
 

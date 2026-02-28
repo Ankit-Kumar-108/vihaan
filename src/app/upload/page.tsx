@@ -116,7 +116,7 @@ export default function UploadPage() {
         <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen register-page">
             {/* Top Bar */}
             <Nav/>
-            <div className="sticky z-40 mt-20 ">
+            <div className="sticky z-40 ">
                 <div className="max-w-3xl mx-auto flex items-center justify-between px-4 h-16">
                     <Link href="/" className="flex items-center gap-2">
                     </Link>
