@@ -7,19 +7,22 @@ export default async function GetPhoto() {
 
     const photos = data.docs.map((doc) => {
       const docData = doc.data()
-      const driveId = docData.driveId
+      const originalUrl = docData.url
 
       return {
         id: doc.id,
         ...docData,
-        // Smart URL patterns for Google Drive
-        dataUrl: `https://drive.google.com/thumbnail?id=${driveId}&sz=w1000`, // Increased size for gallery
-        fullResImg: `https://drive.google.com/uc?export=view&id=${driveId}`,
-        timestamp: docData.createdAt?.toDate?.()?.toISOString() || docData.createdAt, 
+        //500px, auto-optimized thumbnail
+        dataUrl: originalUrl.replace('/upload/', '/upload/f_auto,q_auto,w_500,c_limit/'),
+
+        // 3. FULL RES: Use the original URL (but still add f_auto/q_auto for speed)
+        fullResImg: originalUrl.replace('/upload/', '/upload/f_auto,q_auto/'),
+
+        timestamp: docData.createdAt?.toDate?.()?.toISOString() || docData.createdAt,
       }
     })
 
-    return JSON.parse(JSON.stringify(photos)); // Ensures data is serializable for Client Components
+    return JSON.parse(JSON.stringify(photos));
   } catch (error) {
     console.error("Error fetching photos", error)
     return []

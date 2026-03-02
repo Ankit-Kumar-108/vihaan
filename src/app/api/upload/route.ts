@@ -1,6 +1,5 @@
-import { drive, db } from '@/lib/server-configs';
+import { cloudinary, db } from '@/lib/server-configs';
 import { NextResponse } from 'next/server';
-import { Readable } from 'stream';
 
 export async function POST(req: Request) {
     try {
@@ -11,29 +10,42 @@ export async function POST(req: Request) {
 
         if (!file) return NextResponse.json({ error: "No file" }, { status: 400 });
 
-        // 1. Convert File to Buffer for Google Drive
+        // 1. Convert File to Buffer
         const bytes = await file.arrayBuffer();
         const buffer = Buffer.from(bytes);
 
-        // 2. Upload to Google Drive (Private Folder)
-        const driveRes = await drive.files.create({
-            requestBody: {
-                name: `${category}_${Date.now()}_${file.name}`,
-                parents: [process.env.DRIVE_FOLDER_ID!],
-            },
-            media: {
-                mimeType: file.type,
-                body: Readable.from(buffer),
-            },
-            fields: "id"
-        });
+        // 2. Upload to Cloudinary
+        const cloudinaryRes = await new Promise<any>((resolve, reject) => {
+            const uploadStream = cloudinary.uploader.upload_stream(
+                {
+                    folder: "submission",
+                    public_id: `${category}_${Date.now()}_${file.name.split('.')[0]}`,
+                    resource_type: "auto",
+                },
+                (error, result) => {
+                    if (error) {
+                        console.error("Cloudinary Stream Error:", error);
+                        return reject(error);
+                    } else {
+                        resolve(result);
+                    }
+                }
+            )
+            uploadStream.end(buffer)
+        })
 
-        const driveId = driveRes.data.id;
+        const cloudyId = cloudinaryRes?.public_id
+        const secureUrl = cloudinaryRes?.secure_url
 
-        // 3. Save Record to Firebase Firestore
+        if (!secureUrl) {
+            return NextResponse.json({ error: "Cloudinary upload incomplete" }, { status: 500 });
+        }
+
+        // Save Record to Firebase Firestore
         // This acts as your "Pending Queue"
         await db.collection('submissions').add({
-            driveId: driveId,
+            cloudyId: cloudyId,
+            url: secureUrl,
             category: category,
             uploaderName: uploaderName,
             fileName: file.name,
@@ -41,7 +53,7 @@ export async function POST(req: Request) {
             createdAt: new Date().toISOString(),
         });
 
-        return NextResponse.json({ success: true, driveId });
+        return NextResponse.json({ success: true, cloudyId, url: secureUrl });
 
     } catch (error: any) {
         console.error("Upload Error:", error);

@@ -4,20 +4,12 @@ import Link from 'next/link';
 import { ApprovePhoto } from './approvePhoto';
 import GetPhoto from './getPhoto';
 import DeletePhoto from './deletePhoto';
+import { signOut } from 'next-auth/react';
 
-// interface PendingPhoto {
-//     id: string;
-//     category: string;
-//     uploaderName: string;
-//     dataUrl: string;
-//     fileName: string;
-//     timestamp: string;
-//     status: 'pending' | 'approved' | 'rejected';
-// }
 interface PendingPhoto {
     id: string;
     timestamp: string
-    driveId: string;
+    cloudyId: string;
     fileName: string
     category: string;
     uploaderName: string;
@@ -44,7 +36,7 @@ export default function AdminPage() {
     }, [loadPhotos]);
 
     const handleApprove = async (photo: PendingPhoto) => {
-        const approvedPhoto = await ApprovePhoto(photo.id, photo.driveId)
+        const approvedPhoto = await ApprovePhoto(photo.id)
         if (approvedPhoto.success) {
             // setPhotos(prev => prev.map(p => p.id === photo.id ? { ...p, status: 'published' } : p))
             setSelectedPhoto(null)
@@ -66,7 +58,7 @@ export default function AdminPage() {
     };
 
     const deletePhoto = async (photo: PendingPhoto) => {
-        const result = await DeletePhoto(photo.id, photo.driveId);
+        const result = await DeletePhoto(photo.id, photo.cloudyId);
 
         if (result.success) {
             const updatedList = photos.filter((p) => p.id !== photo.id);
@@ -100,6 +92,13 @@ export default function AdminPage() {
                     <button onClick={loadPhotos} className="text-sm text-slate-500 hover:text-primary flex items-center gap-1 transition-colors">
                         <span className={`material-symbols-outlined ${loading ? 'animate-spin' : ''}`}>refresh</span>
                         {loading ? 'Loading...' : 'Refresh'}
+                    </button>
+                    <button
+                        onClick={() => signOut({ callbackUrl: "/" })}
+                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-red-100 text-red-600 hover:bg-red-600 hover:text-white transition-all font-medium"
+                    >
+                        <span className="material-symbols-outlined text-[20px]">logout</span>
+                        Sign Out
                     </button>
                 </div>
             </div>
