@@ -2,7 +2,6 @@
 
 import nodemailer from "nodemailer"
 import { render } from "@react-email/render"
-import Error from "next/error"
 
 
 export async function handleRegisteration(formData:FormData){
