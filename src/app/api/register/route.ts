@@ -2,7 +2,6 @@ import { NextResponse, NextRequest } from "next/server";
 import { appendToSheet } from "@/lib/sheet";
 import sendConfirmationEmail from "@/lib/mailer";
 import { db } from "@/lib/server-configs";
-import { error } from "console";
 
 
 export async function POST(req: NextRequest) {
