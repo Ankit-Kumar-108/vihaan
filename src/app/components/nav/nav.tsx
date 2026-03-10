@@ -26,7 +26,7 @@ export default function Nav() {
         <div className="flex items-center justify-between h-20">
           <Link href={"/"}>
             <div className="flex items-center gap-3">
-              <img src="/logo/logo.JPG" alt="RGI" className="size-8 rounded-lg" />
+              <img src="/logo/logo.png" alt="RGI" className="size-8 rounded-lg" />
               <div className="flex gap-1.5 ">
                 <h2 className="text-slate-900 dark:text-white sm:text-2xl text-lg font-extrabold tracking-tight">Vihan 26</h2>
                 <span className='lg:hidden'>

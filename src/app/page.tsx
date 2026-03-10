@@ -6,7 +6,6 @@ import About from "./components/About";
 import EventsShowcase from "./components/EventsShowcase";
 import Timeline from "./components/Timeline";
 import QRUploadSection from "./components/QRUploadSection";
-import Image from "next/image";
 
 export default function VihaanFestival() {
   return (
@@ -18,7 +17,7 @@ export default function VihaanFestival() {
           {/* Abstract Background Elements */}
           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-20"></div>
-            <div className="absolute top-20 right-[-10%] w-125 h-125 bg-secondary-accent/20 rounded-full blur-[100px] mix-blend-screen animate-pulse"></div>
+            <div className="absolute top-20 right-[20%] w-125 h-125 bg-secondary-accent/20 rounded-full blur-[100px] mix-blend-screen animate-pulse"></div>
             <div className="absolute bottom-0 left-[-10%] w-150 h-150 bg-primary/10 rounded-full blur-[120px] mix-blend-screen"></div>
           </div>
 
@@ -40,24 +39,27 @@ export default function VihaanFestival() {
                 </p>
               </div>
 
-              {/* Hero Image */}
-              <div className="flex-1 w-full max-w-150 lg:max-w-none relative group perspective-1000">
-                <div className="absolute -inset-4 bg-linear-to-r from-secondary-accent via-primary to-secondary-accent rounded-[2.5rem] opacity-50 blur-2xl group-hover:opacity-70 transition-opacity duration-500"></div>
-                <div className="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl bg-[#1a0c13] aspect-4/3 rotate-y-6 hover:rotate-0 transition-all duration-500 ease-out">
-                  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent z-10"></div>
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-110"
-                    data-alt="Excited crowd at a night concert with colorful stage lights and confetti"
-                    style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFqiaiuC90Vm6Uy0to4KaJbTIunUAo0KGe93DZ0DoVm9u2HDu2r491UlJe-peaqVlXBrtlACU-SKktCAZucutpd7beeAAEF7Bos6Ehu8-sjzZisAeR5hg1FGWFY21_Y81NdzdoDJTN6kS31pFcBJvuMrzEaCMF-YvYC3MrpvRcTE02220CziD8AoV7sZXA50gd4ZKAlrPSjI77OOicfMU9dTOB9lPvMTCQquusswlyANDhM9oMeIA2ioZgRb50ltlAG66cyTqZtTbh')" }}
-                  ></div>
-                  <div className="absolute bottom-6 left-6 right-6 z-20">
-                    <div className="glass-panel p-4 rounded-xl flex items-center justify-between">
+              {/* Hero Video */}
+              <div className="flex-1 w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px] lg:max-w-[420px] xl:max-w-[460px] mx-auto lg:mx-0 relative group perspective-1000">
+                <div className="absolute inset-0 bg-linear-to-r from-secondary-accent via-primary to-secondary-accent rounded-[2.5rem] opacity-50 blur-2xl group-hover:opacity-70 transition-opacity duration-500"></div>
+                <div className="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl bg-[#1a0c13] aspect-3/4 rotate-y-6 hover:rotate-0 transition-all duration-500 ease-out">
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent z-10 pointer-events-none"></div>
+                  <video
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loop
+                    muted
+                    autoPlay
+                    playsInline
+                    src="/videos/vihanComingSoon.mp4"
+                  ></video>
+                  <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 z-20">
+                    <div className="glass-panel p-3 sm:p-4 rounded-xl flex items-center justify-between">
                       <div>
-                        <p className="text-primary text-xs font-bold uppercase mb-1">Featured Event</p>
-                        <h3 className="text-white font-bold text-lg">Neon Nights Concert</h3>
+                        <p className="text-primary text-xs font-bold uppercase mb-1">Vihan</p>
+                        <h3 className="text-white font-bold text-base sm:text-lg">Coming Soon</h3>
                       </div>
-                      <button className="h-10 w-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-slate-200 transition-colors">
-                        <span className="material-symbols-outlined">arrow_outward</span>
+                      <button className="h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-slate-200 transition-colors shrink-0">
+                        <span className="material-symbols-outlined text-lg sm:text-xl">arrow_outward</span>
                       </button>
                     </div>
                   </div>
@@ -87,7 +89,7 @@ export default function VihaanFestival() {
           {/* Category Section */}
           <section className="relative z-10 py-12 px-4 md:px-8 max-w-7xl mx-auto">
             <div className="p-3 mb-7">
-              <h1 className="font-bold text-2xl md:text-5xl mb-3">Winners of Vihaan 2026</h1>
+              <h1 className="font-bold text-2xl md:text-5xl mb-3">Winners of Vihan 2026</h1>
               <p className="text-slate-500 dark:text-slate-400">Top of the Line</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
