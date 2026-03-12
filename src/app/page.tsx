@@ -53,7 +53,7 @@ export default function VIHANFestival() {
                   <span className="text-transparent bg-clip-text bg-linear-to-r from-secondary-accent to-primary">ON THE MOVE</span>
                 </h1>
                 <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
-                  Proudly presented by <span className="font-bold text-purple-400">RADHARAMAN GROUP OF INSTITUTES</span>, VIHAN is a spectacular celebration where creativity, innovation, and passion collide on one electrifying stage. With 20+ events spanning singing, dance, fashion, sports, and technology — experience fierce competition, unforgettable performances, and campus energy at its peak. This is where champions are made.
+                  Proudly presented by <span className="font-bold text-purple-500 dark:text-purple-400">RADHARAMAN GROUP OF INSTITUTES</span>, VIHAN is a spectacular celebration where creativity, innovation, and passion collide on one electrifying stage. With 20+ events spanning singing, dance, fashion, sports, and technology — experience fierce competition, unforgettable performances, and campus energy at its peak. This is where champions are made.
                 </p>
               </div>
 
