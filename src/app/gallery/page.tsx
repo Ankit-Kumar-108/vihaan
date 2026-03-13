@@ -72,35 +72,6 @@ export default async function Gallery() {
           initialPhotos={sportResult.photos}
           initialLastId={sportResult.lastId}
         />
-        {/* <section className="w-full p-4 sm:p-6 bg-white dark:bg-slate-700">
-          <div className="flex items-center gap-3 mb-4 sm:mb-6 pr-4 sm:pr-10">
-            <div className="h-6 sm:h-8 w-1.5 rounded-full bg-primary" />
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">The Sports Arena</h2>
-            <a className="ml-auto text-sm font-bold text-primary hover:text-primary-dark flex items-center gap-1" href="#">
-              View All <span className="material-symbols-outlined text-sm">arrow_forward</span>
-            </a>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 auto-rows-[250px] sm:auto-rows-[300px] md:auto-rows-[350px]">
-            {[
-              { label: 'Finals', title: 'Last Minute Dunk', icon: 'sports_basketball', color: 'text-primary', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAD3pw5KXdaCF6-DOCQXsQP4T-Es-HCWK8XrwGqqvwH_BlbPBOyvn63N2VYRyRhcWMyQln5OoympAPpUwL-qwfuKweymOFTzxRN8plwWZCOhYNbxwuXGAD65-T_ZW53CanBci0D4gkMet3CHfySzkjV5lpT_7DS62vrDXjjmAkem4fDPgTCOLTPWQvhH_e7pu6dYnKAuVXzKeysl-ioeGYRi_q2dmfXMj7sTXiCWBW-xM4ufou67ABtvUJMTNakMk8oMZl7IyIxB71o' },
-              { label: 'Match 04', title: 'Golden Goal Moment', icon: 'sports_soccer', color: 'text-secondary-blue', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDxq05p2k85vGAwUyJRuUCE4AuX2azcpz_zIVN3VoWAicRveFwRVF1tj9nrwhE_Y1GVmGFwYFPhTWbDSHhOPUj9CUvPDwH4R0N_F8Kc4LXzOKFDfxzDwYnLmcG1UNTDPAUde7K4ej_3f-CmQ4mk6cHvxngZFjNSF5R4kWwIezWqIYd61Vnf1w4m0zMiGaus3kjwqNs6oUZfGphxIhFlgQIHJs8howBXwHfOSIO5knbpLCuH4jWtas3u87piFVB3T-t4cQ0MZYBy5BCk' },
-              { label: 'Doubles', title: 'Smash Hit Rally', icon: 'sports_tennis', color: 'text-primary', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAbUzfav7VgXWPFDltZGQH8URhy9Y3r8h7Inw99P6Z8P0TjXQfI38vYcwaS2OwLMUYDCp6YamEKk6KYpWmcixlV7jg7mqz0BKzhAV3cn2ZQEgbGybRjDXWdtO7JewkKuLvQ5Hx8yyrRGjJtHdjkwFb35f_GXgDlmRwwFEQjF1SdkAqGGNaKcpyHrEn_8h7x4pZ93FMhCQQFGZlQ3HbX8T4CqdoZ5_w09L8idXeuA8_zJNTOEMqjnUVdBno3IP8YtOxGmE1_sj1lOM53' },
-              { label: 'Track', title: '100m Sprint Finish', icon: 'sprint', color: 'text-secondary-blue', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDsNmLwoGjtg-We92G7XsXIMxTH74RJgPxftxd5CWBbcJPhY1IObLW82aJqtvKOSGNB8k962-g7tt7NYjQE6Sq7JybimACabT3LrjNgZyd55TaD0YU64WUQVIoccf-LX2NdXpTn6osqUxGapjhstM-Pq8uKtnedymdSen8oAwhqznVx_7_5Lv-FffpyBk5jiS6pC_Lqa2DSrLuqXOhm7ZGR8vLaIv52H0qBiB7kQ16k4nI01kp32D572ENTHA89cqhB2ffT3NH_PSIM' },
-            ].map((card) => (
-              <div key={card.title} className="relative rounded-2xl overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300">
-                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style={{ backgroundImage: `url('${card.img}')` }} />
-                <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black/90" />
-                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/10 backdrop-blur-md border border-white/20 p-1.5 sm:p-2 rounded-lg">
-                  <span className="material-symbols-outlined text-white text-[20px] sm:text-[24px]">{card.icon}</span>
-                </div>
-                <div className="absolute bottom-0 left-0 p-4 sm:p-5 w-full">
-                  <span className={`${card.color} text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-1 block`}>{card.label}</span>
-                  <h3 className="text-white text-lg sm:text-xl font-bold leading-tight">{card.title}</h3>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section> */}
 
         {/* Music & Debate Section — client component for load-more interactivity */}
         <GallerySection

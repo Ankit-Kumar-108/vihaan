@@ -44,7 +44,7 @@ export default function GallerySection({ title, accentColor, category, initialPh
             const blob = await res.blob();
             const a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
-            a.download = `vihaan_${category}_${photo.id}.jpg`;
+            a.download = `VIHAN_${category}_${photo.id}.jpg`;
             a.click();
             URL.revokeObjectURL(a.href);
         } catch {
@@ -83,7 +83,7 @@ export default function GallerySection({ title, accentColor, category, initialPh
                             <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
                             <div className="absolute bottom-0 left-0 p-4 sm:p-5 w-full translate-y-2 group-hover:translate-y-0 transition-transform">
                                 <h3 className="text-white text-md sm:text-xl font-bold">
-                                    {photo.eventName ?? 'Vihaan Event'}
+                                    {photo.eventName ?? 'VIHAN'}
                                 </h3>
                                 <p className="text-slate-300 text-xs sm:text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity delay-75">
                                     {photo.category ?? 'Highlight moment'}
@@ -134,7 +134,7 @@ export default function GallerySection({ title, accentColor, category, initialPh
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             src={selectedPhoto.url || selectedPhoto.thumbnailUrl}
-                            alt={selectedPhoto.eventName ?? 'Vihaan Event'}
+                            alt={selectedPhoto.eventName ?? 'VIHAN Event'}
                             className="max-h-[75vh] w-auto max-w-full object-contain rounded-2xl shadow-2xl"
                         />
 

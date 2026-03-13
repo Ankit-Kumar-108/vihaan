@@ -20,17 +20,16 @@ export async function GET() {
         const session = await getServerSession(authOptions);
 
         const isAdmin = session?.user?.email === process.env.ADMIN_EMAIL;
-        // const UPLOAD_LIMIT = isAdmin ? 200 : 4;
 
         const settingsDoc = await db.collection('config').doc('siteSettings').get();
         const settings = settingsDoc.data();
-        
-        if(!isAdmin && settings?.uploadEnabled ===false){
-            return NextResponse.json({error:"Uploads are currently Disabled", enabled: false}, {status:403})
+
+        if (!isAdmin && settings?.uploadEnabled === false) {
+            return NextResponse.json({ error: "Uploads are currently Disabled", enabled: false }, { status: 403 })
         }
 
-        const UPLOAD_LIMIT = isAdmin? 999 : (settings?.uploadLimitPerUser ?? 4)
-        
+        const UPLOAD_LIMIT = isAdmin ? 999 : (settings?.uploadLimitPerUser ?? 4)
+
         const ip = await getClientIp();
         const existing = await db.collection('submissions')
             .where('uploaderIp', '==', ip)
@@ -49,16 +48,15 @@ export async function POST(req: Request) {
         const session = await getServerSession(authOptions);
 
         const isAdmin = session?.user?.email === process.env.ADMIN_EMAIL;
-        // const UPLOAD_LIMIT = isAdmin ? 200 : 4;
         const settingsDoc = await db.collection('config').doc('siteSettings').get();
         const settings = settingsDoc.data();
-        
-        if(!isAdmin && settings?.uploadEnabled ===false){
-            return NextResponse.json({error:"Uploads are currently Disabled", enabled: false}, {status:403})
+
+        if (!isAdmin && settings?.uploadEnabled === false) {
+            return NextResponse.json({ error: "Uploads are currently Disabled", enabled: false }, { status: 403 })
         }
 
-        const UPLOAD_LIMIT = isAdmin? 999 : (settings?.uploadLimitPerUser ?? 4)
-        const { url, cloudyId, category, uploaderName, fileName } = await req.json();
+        const UPLOAD_LIMIT = isAdmin ? 999 : (settings?.uploadLimitPerUser ?? 4)
+        const { url, cloudyId, category, uploaderName, fileName, eventName } = await req.json();
 
         if (!url || !cloudyId) {
             return NextResponse.json({ error: "Missing upload data" }, { status: 400 });
@@ -85,6 +83,7 @@ export async function POST(req: Request) {
             uploaderName,
             fileName,
             uploaderIp: ip,
+            eventName: `VIHAN ${new Date().getFullYear()}`,
             status: 'pending',
             createdAt: new Date().toISOString(),
         });

@@ -44,13 +44,13 @@ export default function Nav() {
             </div>
           </Link>
           <nav className="hidden md:flex gap-8 items-center">
-            <Link className={`text-sm font-bold ${isActive('/') ? 'text-red-500' : 'text-slate-800 dark:text-slate-200 hover:text-primary'}`} href="/">Home</Link>
-            <Link className={`text-sm font-bold ${isActive('/events') ? 'text-red-500' : 'text-slate-800 dark:text-slate-200 hover:text-primary'}`} href="/events">Events</Link>
-            <Link className={`text-sm font-bold ${isActive('/gallery') ? 'text-red-500' : 'text-slate-800 dark:text-slate-200 hover:text-primary'}`} href="/gallery">Gallery</Link>
+            <Link className={`text-sm font-bold ${isActive('/') ? 'text-purple-500 transition-all duration-200' : 'text-slate-800 dark:text-slate-200 hover:text-primary'}`} href="/">Home</Link>
+            <Link className={`text-sm font-bold ${isActive('/events') ? 'text-purple-500 transition-all duration-200' : 'text-slate-800 dark:text-slate-200 hover:text-primary'}`} href="/events">Events</Link>
+            <Link className={`text-sm font-bold ${isActive('/gallery') ? 'text-purple-500 transition-all duration-200' : 'text-slate-800 dark:text-slate-200 hover:text-primary'}`} href="/gallery">Gallery</Link>
           </nav>
           <div className="flex items-center gap-4">
             <ThemeToggle />
-            <Link href="/register" className={`hidden sm:flex items-center justify-center rounded-full h-10 px-6 bg-primary hover:bg-primary/90 text-sm font-bold transition-all shadow-[0_0_15px_rgba(238,43,140,0.4)] hover:shadow-[0_0_25px_rgba(238,43,140,0.6)] ${isActive('/register') ? 'text-yellow-300/70' : 'text-white'}`}>
+            <Link href="/register" className={`hidden sm:flex items-center justify-center rounded-full h-10 px-6 bg-primary hover:bg-primary/90 text-sm font-bold transition-all shadow-[0_0_15px_rgba(238,43,140,0.4)] hover:shadow-[0_0_25px_rgba(238,43,140,0.6)]`}>
               Register Now
             </Link>
             <button
