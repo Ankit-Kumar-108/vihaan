@@ -37,7 +37,7 @@ export const mailerTemplate = (
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Registration Confirmed - Vihaan 2026</title>
+  <title>Registration Confirmed - VIHAN 2026</title>
   <!--[if mso]>
   <style type="text/css">
     body, table, td { font-family: Arial, sans-serif !important; }
@@ -63,7 +63,7 @@ export const mailerTemplate = (
                     <img src="cid:college_logo" alt="RGI" width="44" height="44" style="display: block; border-radius: 10px;" />
                   </td>
                   <td style="padding-left: 14px; vertical-align: middle;">
-                    <p style="margin: 0; font-size: 20px; font-weight: 800; color: #c084fc; letter-spacing: -0.5px;">VIHAAN 2026</p>
+                    <p style="margin: 0; font-size: 20px; font-weight: 800; color: #c084fc; letter-spacing: -0.5px;">VIHAN 2026</p>
                     <p style="margin: 2px 0 0; font-size: 10px; color: #a78bfa; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;">Radharaman Group of Institutes</p>
                   </td>
                   <td align="right" style="vertical-align: middle;">
@@ -89,7 +89,7 @@ export const mailerTemplate = (
                       See you at the stage! 🎉
                     </h1>
                     <p style="margin: 10px 0 0; font-size: 15px; color: #c4b5fd; line-height: 1.6;">
-                      You&rsquo;re officially part of <strong style="color: #e9d5ff;">Vihaan 2026</strong> at Radharaman Group of Institutes, Bhopal.
+                      You&rsquo;re officially part of <strong style="color: #e9d5ff;">VIHAN 2026</strong> at Radharaman Group of Institutes, Bhopal.
                     </p>
                   </td>
                 </tr>
@@ -271,7 +271,7 @@ export const mailerTemplate = (
                 </a>
               </p>
               <p style="margin: 20px 0 0; font-size: 11px; color: #475569;">
-                © 2026 Vihaan Festival — Radharaman Group of Institutes, Bhopal
+                © 2026 VIHAN Festival — Radharaman Group of Institutes, Bhopal
               </p>
             </td>
           </tr>

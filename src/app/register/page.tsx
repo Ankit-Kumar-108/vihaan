@@ -202,20 +202,21 @@ export default function RegisterPage() {
                                                 onChange={(e) => setFormData({ ...formData, department: e.target.value })}
                                                 required
                                                 className="w-full bg-slate-100 dark:bg-background-dark/50 border border-slate-200 dark:border-white/10 rounded-2xl py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-400 appearance-none">
-                                                <option value="">Select Department</option>
-                                                <option>Computer Science Engineering (REC)</option>
-                                                <option>Mechanical Engineering (REC)</option>
-                                                <option>Civil Engineering (REC)</option>
-                                                <option>Electrical Engineering (REC)</option>
-                                                <option>Computer Science Engineering (RITS)</option>
-                                                <option>Mechanical Engineering (RITS)</option>
-                                                <option>Civil Engineering (RITS)</option>
-                                                <option>Electrical Engineering (RITS)</option>
-                                                <option>BAHMS (RAMCRH)</option>
-                                                <option>Nursing (RIN)</option>
-                                                <option>Pharmacy (RCP)</option>
-                                                <option>Pharmacy (RIPS)</option>
-                                                <option>Diploma (REC)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="" disabled >Select Department</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">Computer Science Engineering (REC)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">Mechanical Engineering (REC)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">Civil Engineering (REC)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">Electrical Engineering (REC)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">Computer Science Engineering (RITS)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">Mechanical Engineering (RITS)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">Civil Engineering (RITS)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">Electrical Engineering (RITS)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">BAHMS (RAMCRH)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">Nursing (RIN)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">Pharmacy (RCP)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">Pharmacy (RIPS)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">Diploma (REC)</option>
+                                                <option className='bg-slate-100 dark:bg-background-dark' value="">MBA (REC)</option>
 
                                             </select>
                                         </div>
@@ -284,9 +285,9 @@ export default function RegisterPage() {
                                             required
                                             className="w-full mt-2 bg-slate-100 dark:bg-background-dark/50 border border-slate-200 dark:border-white/10 rounded-2xl py-4 pl-4 pr-4 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-900 dark:text-gray-400 appearance-none"
                                         >
-                                            <option value="">Select Sub-Event...</option>
+                                            <option className='bg-slate-100 dark:bg-background-dark' disabled value="">Select Sub-Event...</option>
                                             {subEventsMap[formData.event]?.map((sub) => (
-                                                <option key={sub} value={sub}>{sub}</option>
+                                                <option key={sub} className='bg-slate-100 dark:bg-background-dark' value={sub}>{sub}</option>
                                             ))}
                                         </select>
                                     </div>

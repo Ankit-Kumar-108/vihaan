@@ -28,7 +28,7 @@ export default function About() {
                         VIHAN 2k26 is the annual cultural and technical festival organized by
                         <strong className="text-purple-500 dark:text-purple-400"> RADHARAMAN GROUP OF INSTITUTES</strong>.
                         From electrifying pro-nights to adrenaline-pumping sports, from intellectual debates to creative
-                        art showcases — Vihaan is the ultimate celebration of youth, innovation, and energy.
+                        art showcases — VIHAN is the ultimate celebration of youth, innovation, and energy.
                     </p>
                     <p className="text-slate-500 dark:text-slate-400 leading-relaxed">
                         Over three thrilling days, students from 4+ colleges come together to compete, collaborate,
