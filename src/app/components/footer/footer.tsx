@@ -13,19 +13,24 @@ export default function Footer() {
             </div>
             <p className="text-slate-500 max-w-sm mb-2">
               The annual cultural and technical festival organised by{' '}
-              <a
-                href="https://www.rgibhopal.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline font-semibold"
-              >
+              <Link href="https://www.rgibhopal.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">
                 Radharaman Group of Institutes
-              </a>
+              </Link>
               , Bhopal — bringing together the brightest minds and wildest spirits.
             </p>
-            <p className="text-xs text-slate-400 mb-6">
-              Radharaman Engineering College • Radharaman Institute of Technology & Science • Radharaman Institute of Research & Technology
-            </p>
+            <div className="text-xs text-slate-400 mb-6 flex flex-col gap-2">
+              <Link href="https://www.rgibhopal.com" target="_blank" rel="noopener noreferrer" className="flex flex-col gap-2">
+             <p className="hover:text-purple-500 transition-all duration-200">• Radharaman Engineering College</p>                          
+             <p className="hover:text-purple-500 transition-all duration-200">• Radharaman Institute of Technology & Science</p>             
+             <p className="hover:text-purple-500 transition-all duration-200">• Radharaman Institute of Pharmaceutical Sciences</p> 
+
+              </Link>
+              <Link href="https://www.rgibhopal.com" target="_blank" rel="noopener noreferrer" className="flex flex-col gap-2">
+             <p className="hover:text-purple-500 transition-all duration-200">• Radharaman College of Pharmacy</p>
+             <p className="hover:text-purple-500 transition-all duration-200">• Radharaman Ayurveda Medical College Research Hospital</p>
+             <p className="hover:text-purple-500 transition-all duration-200">• Radharaman Institute of Nursing</p>
+              </Link>
+              </div>
             <div className="flex gap-3">
               <a
                 href="https://www.rgibhopal.com"

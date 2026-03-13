@@ -8,67 +8,67 @@ const schedule = [
         desc: 'Where Sweat meets Success',
         theme: 'Victory',
         events: [
-            { link:'/register' ,title: 'Tug of War', icon: 'sports_gymnastics' },
-            { link:'/register' ,title: 'Badminton', icon: 'sports_tennis' },
-            { link:'/register' ,title: 'Carrom', icon: 'casino' },
-            { link:'/register' ,title: 'Chess', icon: 'extension' },
-            { link:'/register' ,title: 'Arm Wrestling', icon: 'fitness_center' },
-            { link:'/register' ,title: 'Kho Kho', icon: 'directions_run' },
-            { link:'/register' ,title: 'Kabaddi', icon: 'sports_martial_arts' },
-            { link:'/register' ,title: 'Treasure Hunt', icon: 'map' },
-            { link:'/register' ,title: 'Slow Bike Race', icon: 'two_wheeler' },
-            { link:'/register' ,title: 'Shot Put', icon: 'sports_baseball' },
-            { link:'/register' ,title: 'Sports Parade', icon: 'celebration' },
-            { link:'/register' ,title: 'Lemon Spoon Race', icon: 'restaurant' },
-            { link:'/register' ,title: 'Volleyball', icon: 'sports_volleyball' },
-            { link:'/register' ,title: 'Race (100M/ 400M)', icon: 'sprint' },
-            { link:'/register' ,title: 'Gully Cricket', icon: 'sports_cricket' },
+            { link: '/register', title: 'Tug of War', icon: 'sports_gymnastics' },
+            { link: '/register', title: 'Badminton', icon: 'sports_tennis' },
+            { link: '/register', title: 'Carrom', icon: 'casino' },
+            { link: '/register', title: 'Chess', icon: 'extension' },
+            { link: '/register', title: 'Arm Wrestling', icon: 'fitness_center' },
+            { link: '/register', title: 'Kho Kho', icon: 'directions_run' },
+            { link: '/register', title: 'Kabaddi', icon: 'sports_martial_arts' },
+            { link: '/register', title: 'Treasure Hunt', icon: 'map' },
+            { link: '/register', title: 'Slow Bike Race', icon: 'two_wheeler' },
+            { link: '/register', title: 'Shot Put', icon: 'sports_baseball' },
+            { link: '/register', title: 'Sports Parade', icon: 'celebration' },
+            { link: '/register', title: 'Lemon Spoon Race', icon: 'restaurant' },
+            { link: '/register', title: 'Volleyball', icon: 'sports_volleyball' },
+            { link: '/register', title: 'Race (100M/ 400M)', icon: 'sprint' },
+            { link: '/register', title: 'Gully Cricket', icon: 'sports_cricket' },
         ],
-        accent: 'from-orange-500 to-rose-600', // Fiery, aggressive
+        accent: 'from-orange-500 to-rose-600',
     },
     {
         title: 'Technical',
         desc: 'Unleashing the Future',
         theme: 'Blaze',
         events: [
-            { link:'/register' ,title: 'Technical Presentation', icon: 'co_present' },
-            { link:'/register' ,title: 'Painting', icon: 'palette' },
-            { link:'/register' ,title: 'Reels', icon: 'smart_display' },
-            { link:'/register' ,title: 'Extempore', icon: 'mic_external_on' },
-            { link:'/register' ,title: 'Debate', icon: 'forum' },
-            { link:'/register' ,title: 'Model Presentaion', icon: 'architecture' },
-            { link:'/register' ,title: 'Photography/ College', icon: 'photo_camera' },
-            { link:'/register' ,title: 'LAN Gaming', icon: 'sports_esports' },
-            { link:'/register' ,title: 'Poster Making', icon: 'brush' },
-            { link:'/register' ,title: 'Quiz (General & Technical', icon: 'quiz' },
+            { link: '/register', title: 'Technical Presentation', icon: 'co_present' },
+            { link: '/register', title: 'Painting', icon: 'palette' },
+            { link: '/register', title: 'Reels', icon: 'smart_display' },
+            { link: '/register', title: 'Extempore', icon: 'mic_external_on' },
+            { link: '/register', title: 'Debate', icon: 'forum' },
+            { link: '/register', title: 'Model Presentaion', icon: 'architecture' },
+            { link: '/register', title: 'Photography/ College', icon: 'photo_camera' },
+            { link: '/register', title: 'LAN Gaming', icon: 'sports_esports' },
+            { link: '/register', title: 'Poster Making', icon: 'brush' },
+            { link: '/register', title: 'Quiz (General & Technical', icon: 'quiz' },
         ],
-        accent: 'from-blue-600 to-cyan-500', // Electric Cyber Blue
+        accent: 'from-blue-600 to-cyan-500',
     },
     {
         title: 'Cultural',
         desc: 'Celebrating the melting Pot',
         theme: 'Ignition',
         events: [
-            { link:'/register' ,title: 'Singing (Solo And Duet)', icon: 'mic' },
-            { link:'/register' ,title: 'Mimicry', icon: 'record_voice_over' },
-            { link:'/register' ,title: 'Skit', icon: 'theater_comedy' },
-            { link:'/register' ,title: 'Dance (Solo And Group)', icon: 'music_note' },
-            { link:'/register' ,title: 'Fashion Show', icon: 'styler' },
-            { link:'/register' ,title: 'Poetry Competation (Self Composed)', icon: 'edit_note' },
+            { link: '/register', title: 'Singing (Solo And Duet)', icon: 'mic' },
+            { link: '/register', title: 'Mimicry', icon: 'record_voice_over' },
+            { link: '/register', title: 'Skit', icon: 'theater_comedy' },
+            { link: '/register', title: 'Dance (Solo And Group)', icon: 'music_note' },
+            { link: '/register', title: 'Fashion Show', icon: 'styler' },
+            { link: '/register', title: 'Poetry Competation (Self Composed)', icon: 'edit_note' },
         ],
-        accent: 'from-violet-600 to-fuchsia-600', // Deep Royal Violet to Neon Pink
+        accent: 'from-violet-600 to-fuchsia-600',
     },
     {
         title: 'Art Villa',
         desc: 'Your story, our canvas',
         theme: 'Soul',
         events: [
-            { link:'/register' ,title: 'Nail Painting', icon: 'back_hand' },
-            { link:'/register' ,title: 'Face Painting', icon: 'face_retouching_natural' },
-            { link:'/register' ,title: 'Mehandi', icon: 'draw' },
-            { link:'/register' ,title: 'Rangoli', icon: 'filter_vintage' },
+            { link: '/register', title: 'Nail Painting', icon: 'back_hand' },
+            { link: '/register', title: 'Face Painting', icon: 'face_retouching_natural' },
+            { link: '/register', title: 'Mehandi', icon: 'draw' },
+            { link: '/register', title: 'Rangoli', icon: 'filter_vintage' },
         ],
-        accent: 'from-emerald-500 to-teal-600', // Creative, smooth emerald green
+        accent: 'from-emerald-500 to-teal-600',
     },
 ];
 
@@ -79,7 +79,7 @@ export default function Timeline() {
             <div className="text-center mb-14">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                     <span className="material-symbols-outlined text-primary text-sm">calendar_month</span>
-                    <span className="text-xs font-bold text-primary tracking-wide uppercase">Festival Schedule</span>
+                    <span className="text-xs font-bold text-primary tracking-wide uppercase">VIHAN 2K{new Date().getFullYear().toString().slice(-2)} Lists</span>
                 </div>
                 <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-3">
                     Categories of{' '}

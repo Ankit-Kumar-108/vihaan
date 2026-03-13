@@ -68,7 +68,7 @@ export const mailerTemplate = (
                   </td>
                   <td align="right" style="vertical-align: middle;">
                     <span style="display: inline-block; background-color: rgba(157,54,247,0.2); color: #c084fc; font-size: 10px; font-weight: 700; padding: 5px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1.5px;">
-                      ✓ Confirmed
+                    Verified ✓
                     </span>
                   </td>
                 </tr>
@@ -213,7 +213,7 @@ export const mailerTemplate = (
                         <td colspan="2" style="padding: 16px 0 4px; border-top: 1px solid rgba(157,54,247,0.1);">
                           <p style="margin: 0; font-size: 22px;">🏛️</p>
                           <p style="margin: 6px 0 2px; font-size: 11px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 1.5px;">Venue</p>
-                          <p style="margin: 4px 0 0; font-size: 16px; font-weight: 700; color: #e9d5ff;">Swami Vivekanand Sabhagar</p>
+                          <p style="margin: 4px 0 0; font-size: 16px; font-weight: 700; color: #e9d5ff;">Vivekanand Auditorium</p>
                           <p style="margin: 4px 0 0; font-size: 13px; color: #94a3b8;">Radharaman Group of Institutes, Ratibad, Bhopal</p>
                         </td>
                       </tr>
@@ -224,30 +224,10 @@ export const mailerTemplate = (
             </td>
           </tr>
 
-          <!-- WHAT TO BRING -->
-          <tr>
-            <td style="padding: 10px 30px;">
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: rgba(192,21,106,0.06); border: 1px solid rgba(192,21,106,0.15); border-radius: 14px;">
-                <tr>
-                  <td style="padding: 22px 24px;">
-                    <p style="margin: 0 0 12px; font-size: 14px; font-weight: 700; color: #f0abfc;">
-                      🎒 Remember to Bring
-                    </p>
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-                      <tr><td style="padding: 4px 0; font-size: 13px; color: #d8b4fe;">✅ College ID Card</td></tr>
-                      <tr><td style="padding: 4px 0; font-size: 13px; color: #d8b4fe;">✅ This confirmation email (screenshot)</td></tr>
-                      <tr><td style="padding: 4px 0; font-size: 13px; color: #d8b4fe;">✅ Any event-specific materials</td></tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
           <!-- CTA BUTTON -->
           <tr>
             <td style="padding: 20px 30px 30px;" align="center">
-              <a href="https://maps.google.com/?q=Radharaman+Group+of+Institutes+Ratibad+Bhopal" style="display: inline-block; background: linear-gradient(135deg, #9D36F7, #c0156a); color: #ffffff; font-size: 14px; font-weight: 700; text-decoration: none; padding: 14px 40px; border-radius: 50px; text-align: center; letter-spacing: 0.5px;">
+              <a href="https://maps.app.goo.gl/sqAJT7QzJHYyUKeE6" style="display: inline-block; background: linear-gradient(135deg, #9D36F7, #c0156a); color: #ffffff; font-size: 14px; font-weight: 700; text-decoration: none; padding: 14px 40px; border-radius: 50px; text-align: center; letter-spacing: 0.5px;">
                 📍 Get Directions to Venue
               </a>
             </td>
