@@ -1,9 +1,13 @@
 "use server"
 import { db, cloudinary } from "@/lib/server-configs"
 import { revalidatePath } from "next/cache"
+import { getServerSession } from "next-auth"
+import { authOptions } from "@/app/api/auth/[...nextauth]/route"
 
 export default async function DeletePhoto(id: string, cloudyId: string) {
   try {
+    const session = await getServerSession(authOptions)
+    if (!session) return { success: false, error: "Unauthorized" }
 
     const cloudinaryRes = await cloudinary.uploader.destroy(cloudyId)
 

@@ -11,8 +11,7 @@ export const authOptions: NextAuthOptions = {
     ],
     callbacks: {
         async signIn({ user }) {
-
-            const isAdmin = user.email === process.env.ADMIN_EMAIL || user.email === process.env.ADMIN_EMAIL_2;
+            const isAdmin = user.email === process.env.ADMIN_EMAIL || user.email === process.env.ADMIN_EMAIL2;
 
             if (isAdmin) {
                 return true;

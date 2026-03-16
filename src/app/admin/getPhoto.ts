@@ -1,10 +1,15 @@
 "use server"
 import { db } from "@/lib/server-configs"
+import { getServerSession } from "next-auth"
+import { authOptions } from "@/app/api/auth/[...nextauth]/route"
 
 const PAGE_SIZE = 50;
 
 export default async function GetPhoto(lastDocId?: string) {
   try {
+    const session = await getServerSession(authOptions)
+    if (!session) return { photos: [], lastId: null, hasMore: false }
+
     let query = db.collection('submissions')
       .orderBy('createdAt', 'desc')
       .limit(PAGE_SIZE);
