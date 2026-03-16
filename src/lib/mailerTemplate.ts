@@ -68,7 +68,7 @@ export const mailerTemplate = (
                   </td>
                   <td align="right" style="vertical-align: middle;">
                     <span style="display: inline-block; background-color: rgba(157,54,247,0.2); color: #c084fc; font-size: 10px; font-weight: 700; padding: 5px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1.5px;">
-                    Verified ✓
+                    Verified
                     </span>
                   </td>
                 </tr>
@@ -201,12 +201,12 @@ export const mailerTemplate = (
                         <td style="padding: 12px 0; vertical-align: top; width: 50%;">
                           <p style="margin: 0; font-size: 22px;">📅</p>
                           <p style="margin: 6px 0 2px; font-size: 11px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 1.5px;">Date</p>
-                          <p style="margin: 4px 0 0; font-size: 15px; font-weight: 700; color: #f1f5f9;">March 15-17, 2026</p>
+                          <p style="margin: 4px 0 0; font-size: 15px; font-weight: 700; color: #f1f5f9;">March 30 (tentative)</p>
                         </td>
                         <td style="padding: 12px 0; vertical-align: top; width: 50%;">
                           <p style="margin: 0; font-size: 22px;">🕗</p>
                           <p style="margin: 6px 0 2px; font-size: 11px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 1.5px;">Reporting Time</p>
-                          <p style="margin: 4px 0 0; font-size: 15px; font-weight: 700; color: #f1f5f9;">08:30 AM Sharp</p>
+                          <p style="margin: 4px 0 0; font-size: 15px; font-weight: 700; color: #f1f5f9;">10:00 AM</p>
                         </td>
                       </tr>
                       <tr>
