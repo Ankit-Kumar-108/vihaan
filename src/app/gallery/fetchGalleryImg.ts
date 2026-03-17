@@ -21,7 +21,7 @@ export async function FetchGalleryImg(categoryName: string, lastDocId?: string) 
     const photos = snapshot.docs.map(doc => ({
       id: doc.id,
       ...doc.data(),
-      thumbnailUrl: (doc.data().url as string).replace('/upload/', '/upload/f_auto,q_auto/'),
+      thumbnailUrl: (doc.data().url as string).replace('/upload/', '/upload/f_auto,q_auto,w_400,c_limit/'),
     }));
 
     return {

@@ -20,7 +20,7 @@ export async function getPostersFromCloudinary() {
 
     const posters = result.resources.map((file: any) => 
     ({
-      url: file.secure_url,
+      url: (file.secure_url as string).replace('/upload/', '/upload/f_auto,q_auto,w_600,c_limit/'),
       publicId: file.public_id,
     })
     )

@@ -59,9 +59,10 @@ export default function EventsShowcase() {
                         <div
                             key={index}
                             onClick={() => setSelectedPoster(poster.url)}
-                            className="cursor-pointer group aspect-3/4.5 relative overflow-hidden rounded-2xl p-8 flex flex-col items-center text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)] bg-cover bg-top bg-no-repeat"
-                            style={{ backgroundImage: `url(${poster.url})` }}
+                            className="cursor-pointer group aspect-3/4.5 relative overflow-hidden rounded-2xl p-8 flex flex-col items-center text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)]"
                         >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={poster.url} alt="Event Poster" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-top -z-10" />
                             {/* Register Button */}
                             <Link 
                                 href={"/register"} 

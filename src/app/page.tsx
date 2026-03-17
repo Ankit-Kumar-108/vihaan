@@ -150,9 +150,12 @@ export default function VIHANFestival(data: winnerData) {
                   <Link key={cat.category} href={cat.href}>
                     <div className={`z-20 group relative rounded-2xl h-67 w-52 cursor-pointer transition-all shrink-0 duration-300 hover:scale-[1.03] hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)] overflow-hidden`}>
                       <div className={`absolute z-10 bg-linear-to-br h-57 w-47 left-2 top-4 bg-white dark:bg-black`}></div>
-                      <img src="/images/Frame.png" alt="Frame Image" className="absolute w-full h-full z-50 object-cover" />
+                      <img loading="lazy" src="/images/Frame.png" alt="Frame Image" className="absolute w-full h-full z-50 object-cover pointer-events-none" />
                       {winnerInfo && !winnersLoading ? (
-                        <img src={winnerInfo.imageUrl} alt={`${cat.category} Winner`} className="absolute z-10 bg-linear-to-br h-57 w-47 left-2 top-4 object-cover rounded-2xl" />
+                        <>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img loading="lazy" src={winnerInfo.imageUrl} alt={`${cat.category} Winner`} className="absolute z-10 bg-linear-to-br h-57 w-47 left-2 top-4 object-cover rounded-2xl" />
+                        </>
                       ) : (
                         <>
                         {!winnersLoading && (
@@ -197,9 +200,12 @@ export default function VIHANFestival(data: winnerData) {
                   <Link key={`${cat.category}-copy`} href={cat.href} aria-hidden="true">
                     <div className={`z-20 group relative rounded-2xl h-67 w-52 cursor-pointer transition-all shrink-0 duration-300 hover:scale-[1.03] hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)] overflow-hidden`}>
                       <div className={`absolute z-10 bg-linear-to-br h-57 w-47 left-2 top-4 bg-white dark:bg-black`}></div>
-                      <img src="/images/Frame.png" alt="Frame Image" className="absolute w-full h-full z-50 object-cover" />
+                      <img loading="lazy" src="/images/Frame.png" alt="Frame Image" className="absolute w-full h-full z-50 object-cover pointer-events-none" />
                       {winnerInfo && !winnersLoading ? (
-                        <img src={winnerInfo.imageUrl} alt={`${cat.category} Winner`} className="absolute z-10 bg-linear-to-br h-57 w-47 left-2 top-4 object-cover rounded-2xl" />
+                        <>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img loading="lazy" src={winnerInfo.imageUrl} alt={`${cat.category} Winner`} className="absolute z-10 bg-linear-to-br h-57 w-47 left-2 top-4 object-cover rounded-2xl" />
+                        </>
                       ) : (
                         <>
                         {!winnersLoading && (
