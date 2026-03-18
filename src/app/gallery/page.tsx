@@ -3,6 +3,8 @@ import Footer from '../components/footer/footer'
 import { FetchGalleryImg } from './fetchGalleryImg'
 import GallerySection from './GallerySection'
 
+export const revalidate = 3600 // ISR: revalidate every 1 hour
+
 export default async function Gallery() {
   // Fetch initial data for each category on the server — no useEffect, no loading state
   const [culturalResult, sportResult, technicalResult, artsVillaResult] = await Promise.all([

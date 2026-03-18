@@ -4,6 +4,8 @@ import Footer from '../../components/footer/footer'
 import { FetchGalleryImgFullRes } from '../fetchGalleryImg'
 import CategoryGalleryClient from './CategoryGalleryClient'
 
+export const revalidate = 1200 // ISR: revalidate every 20 minutes
+
 interface Params {
     category: string;
 }
