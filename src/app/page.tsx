@@ -57,25 +57,11 @@ export default async function VIHANFestival() {
                 <div className="absolute inset-0 bg-linear-to-r from-secondary-accent via-primary to-secondary-accent rounded-2xl opacity-50 blur-2xl group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#1a0c13] aspect-3/4 rotate-y-6 hover:rotate-0 transition-all duration-500 ease-out">
                   <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent z-10 pointer-events-none"></div>
-                  <video
+                  <img
                     className="absolute inset-0 w-full h-full object-fill"
-                    loop
-                    muted
-                    autoPlay
-                    playsInline
-                    src="/videos/vihanComingSoon.mp4"
-                  ></video>
-                  <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 z-20">
-                    <div className="glass-panel p-3 sm:p-4 rounded-xl flex items-center justify-between">
-                      <div>
-                        <p className="text-primary text-xs font-bold uppercase mb-1">VIHAn</p>
-                        <h3 className="text-white font-bold text-base sm:text-lg">Coming Soon</h3>
-                      </div>
-                      <button className="h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-slate-200 transition-colors shrink-0">
-                        <span className="material-symbols-outlined text-lg sm:text-xl">arrow_outward</span>
-                      </button>
-                    </div>
-                  </div>
+                    src="/images/homePoster.jpeg"
+                    alt="Home Poster"
+                  ></img>
                 </div>
               </div>
             </div>
@@ -118,7 +104,7 @@ export default async function VIHANFestival() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[250px]">
 
               <Link
-                href="gallery/#dance"
+                href="/gallery/#cultural"
                 className="md:col-span-2 md:row-span-2 relative group rounded-2xl overflow-hidden cursor-pointer block w-full h-full"
               >
                 <div
@@ -134,7 +120,7 @@ export default async function VIHANFestival() {
               </Link>
 
               <Link
-                href="gallery/#fashion"
+                href="/gallery/#cultural"
                 className="md:row-span-2 relative group rounded-2xl overflow-hidden cursor-pointer block w-full h-full"
               >
                 <div
@@ -150,7 +136,7 @@ export default async function VIHANFestival() {
               </Link>
 
               <Link
-                href="gallery/#tech"
+                href="/gallery/#sports"
                 className="relative group rounded-2xl overflow-hidden cursor-pointer block w-full h-full"
               >
                 <div
@@ -166,7 +152,7 @@ export default async function VIHANFestival() {
               </Link>
 
               <Link
-                href="/gallery/#singing"
+                href="/gallery/#cultural"
                 className="relative group rounded-2xl overflow-hidden cursor-pointer block w-full h-full"
               >
                 <div
@@ -182,7 +168,7 @@ export default async function VIHANFestival() {
               </Link>
 
               <Link
-                href="events/Fashion-Winner"
+                href="/gallery/#technical"
                 className="relative group rounded-2xl overflow-hidden cursor-pointer block w-full h-full"
               >
                 <div
@@ -192,7 +178,7 @@ export default async function VIHANFestival() {
                 ></div>
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-80 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="bg-violet-600 text-white text-xs font-bold px-2 py-1 rounded-md mb-2 inline-block">Tech</span>
+                  <span className="bg-violet-600 text-white text-xs font-bold px-2 py-1 rounded-md mb-2 inline-block">Technical</span>
                   <h3 className="text-white text-lg font-bold">Where innovation meets human inspiration</h3>
                 </div>
               </Link>

@@ -2,6 +2,7 @@ import Nav from '../components/nav/nav'
 import Footer from '../components/footer/footer'
 import { FetchGalleryImg } from './fetchGalleryImg'
 import GallerySection from './GallerySection'
+import HashScrollHandler from '../components/hashScrolllerHandler'
 
 export const revalidate = 3600 // ISR: revalidate every 1 hour
 
@@ -19,6 +20,7 @@ export default async function Gallery() {
 
   return (
     <div className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+      <HashScrollHandler />
       {/* Top Navigation */}
       <Nav />
       <main className="flex-1 w-full max-w-360 mx-auto flex flex-col pb-20">
@@ -60,6 +62,7 @@ export default async function Gallery() {
         {/* Dance Section — client component for load-more interactivity */}
         <GallerySection
           title="Cultural Highlights"
+          id="cultural"
           accentColor="bg-secondary-blue"
           category="Cultural"
           cardbg="transparent"
@@ -70,6 +73,7 @@ export default async function Gallery() {
         {/* Sports Section — static cards */}
         <GallerySection
           title="Sports"
+          id="sports"
           cardbg="bg-white dark:bg-slate-700"
           accentColor="bg-slate-800 dark:bg-slate-200"
           category="Sports"
@@ -79,6 +83,7 @@ export default async function Gallery() {
 
         {/* Music & Debate Section — client component for load-more interactivity */}
         <GallerySection
+          id="technical"
           cardbg="transparent"
           title="Technical"
           accentColor="bg-slate-800 dark:bg-slate-200"
@@ -98,6 +103,7 @@ export default async function Gallery() {
         {/* Technical widset */}
         <GallerySection
           cardbg="transparent"
+          id="arts-villa"
           title="Arts Villa"
           accentColor="bg-slate-800 dark:bg-slate-200"
           category="Arts Villa"

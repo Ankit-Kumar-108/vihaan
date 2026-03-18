@@ -45,7 +45,7 @@ export default function Nav() {
           </Link>
           <nav className="hidden md:flex gap-8 items-center">
             <Link className={`text-sm font-bold ${isActive('/') ? 'text-purple-500 transition-all duration-200' : 'text-slate-800 dark:text-slate-200 hover:text-primary'}`} href="/">Home</Link>
-            <Link className={`text-sm font-bold ${isActive('/events') ? 'text-purple-500 transition-all duration-200' : 'text-slate-800 dark:text-slate-200 hover:text-primary'}`} href="/events">Events</Link>
+            <Link className={`text-sm font-bold ${isActive('/upload') ? 'text-purple-500 transition-all duration-200' : 'text-slate-800 dark:text-slate-200 hover:text-primary'}`} href="/upload">Upload Image</Link>
             <Link className={`text-sm font-bold ${isActive('/gallery') ? 'text-purple-500 transition-all duration-200' : 'text-slate-800 dark:text-slate-200 hover:text-primary'}`} href="/gallery">Gallery</Link>
           </nav>
           <div className="flex items-center gap-4">

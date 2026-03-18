@@ -20,9 +20,10 @@ interface GallerySectionProps {
     initialPhotos: Photo[];
     initialLastId: string | null;
     cardbg: string | null;
+    id: string;
 }
 
-export default function GallerySection({ title, accentColor, category, initialPhotos, initialLastId, cardbg }: GallerySectionProps) {
+export default function GallerySection({ title, accentColor, category, initialPhotos, initialLastId, cardbg, id }: GallerySectionProps) {
     const [photos, setPhotos] = useState<Photo[]>(initialPhotos)
     const [lastId, setLastId] = useState<string | null>(initialLastId)
     const [loading, setLoading] = useState(false)
@@ -59,7 +60,7 @@ export default function GallerySection({ title, accentColor, category, initialPh
     }
 
     return (
-        <section className={`w-full p-4 sm:p-6 ${cardbg}`}>
+        <section id={id} className={`w-full p-4 sm:p-6 scroll-mt-24 ${cardbg}`}>
             <div className="flex items-center gap-3 mb-4 sm:mb-6 pr-4 sm:pr-10">
                 <div className={`h-6 sm:h-8 w-1.5 rounded-full ${accentColor}`} />
                 <h2 className="text-[15px] sm:text-xl font-bold text-slate-900 dark:text-white">{title}</h2>
